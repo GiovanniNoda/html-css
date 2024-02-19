@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+
+        header{
+            background-color: gray;
+            border: 5px solid navy;
+            padding: 10px 0px;
+        }
+
+        header > h1{
+            font: bolder 3em sans-serif;
+            color: rgb(87, 14, 155);
+            text-align: center;
+            margin: 20px;
+        }
+
+        nav{
+            background-color: rgb(52, 52, 56);
+            margin: 5px;
+            padding: 5px;
+            text-align: right;
+            box-shadow: 3px 2px 6px 1px rgba(0, 0, 0, 0.547);
+        }
+
+        header > nav >a {
+            text-decoration: none;
+            color: aquamarine;
+            margin: 0px 20px;
+        }
+
+        header > nav > a:visited{
+            color: darkgray;
+        }
+
+        header > nav > a:hover{
+            color: red;
+            text-decoration: underline;
+        }
+
+        .noticias{
+            background-color: aliceblue;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .noticias > article > h2{
+            color: brown;
+            text-align: center;
+            font: italic bold 1.8em arial;
+        }
+
+        article > p{
+            text-align: justify;
+        }
+
+        article > aside{
+            text-align: right;
+            font: italic normal 0.8em arial;
+        }
+
+        footer{
+            background-color: black;
+            border: 3px solid lightslategray;
+        }
+
+        footer > p{
+            color: white;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .esporte > article > h2{
+            font: italic bold 2em arial;
+            color: greenyellow;
+            text-align: center;
+        }
+
+        .esporte{
+            background-color: rgb(48, 90, 127);
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: inset 2px 2px 7px 1px black;
+        }
+
+        div#bola{
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: chocolate;
+            border-radius: 50%;
+        }
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <header> <!-- cabeçalho -->
+        <h1>Meu Site</h1>
+        <nav> <!-- seção onde fica os links para navegaçõ do site-->
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <br>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header> 
+
+    <main> <!-- conteúdo principal do site-->
+        <section class="noticias"> <!-- separar seções de conteúdo -->
+            <article> <!-- artigo -->
+                <h2>Notícias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae rem modi reprehenderit quaerat veritatis placeat dicta rerum praesentium nisi temporibus quasi itaque sed ex inventore alias blanditiis tenetur, molestias exercitationem.</p>
+                <aside> <!-- Elemento relacionado a um artigo -->
+                    Artigo escrito por Lorem.
+                </aside>
+            </article>
+        </section>
+
+        <section class="esporte">
+            <article>
+                <h2>Esportes</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis similique, eaque ipsam numquam necessitatibus tenetur provident quasi porro placeat sequi, omnis tempora error ut architecto ex quia quibusdam iure nobis.</p>
+                <aside>
+                    Aritgo escrito por lorem.
+                </aside>
+            </article>
+        </section>
+    </main>
+
+    <footer> <!-- Rodapé ou final do site. -->
+        <p>Desenvolvido por Giovanni Noda</p>
+    </footer>
+    <div id="bola"></div>
+</body>
+</html>
