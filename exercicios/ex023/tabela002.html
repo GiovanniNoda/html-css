@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de Tabelas Grandes</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="populacao">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="populacao">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="populacao">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Espirito Santo</td>
+                <td class="populacao">4.018.650</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total de Habitantes</th>
+                <td id="total"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        const populacoes = document.querySelectorAll(".populacao")
+        let totalHab = 0
+
+        for (let i = 0; i < populacoes.length; i++) {
+            const populacao = populacoes[i]
+            const valorPopulacao = Number(populacao.innerText.replace(/\./g, ''))
+            totalHab += valorPopulacao
+        }
+
+        document.getElementById("total").innerText = totalHab
+    </script>
+</body>
+</html>
