@@ -10,8 +10,16 @@
         }
 
         table {
-            width: 500px;
+            width: 400px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
         }
 
         td, th {
@@ -19,9 +27,31 @@
             padding: 10px;
         }
 
+        .num {
+            text-align: right;
+        }
+
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        #titulo-populacao {
+            width: 50px;
+        }
+
+        tbody {
+            background-color: azure;
+        }
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgrey;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
         }
     </style>
 </head>
@@ -29,38 +59,39 @@
     <h1>Uso de Tabelas Grandes</h1>
     
     <table>
+        <caption>População de cada Estado do Sudeste</caption>
         <thead>
             <tr>
                 <th>Estado</th>
-                <th>População</th>
+                <th id="titulo-populacao">População</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>São Paulo</td>
-                <td class="populacao">45.919.049</td>
+                <td class="populacao num">45.919.049</td>
             </tr>
             <tr>
                 <td>Minas Gerais</td>
-                <td class="populacao">21.168.791</td>
+                <td class="populacao num">21.168.791</td>
             </tr>
             <tr>
                 <td>Rio de Janeiro</td>
-                <td class="populacao">17.264.943</td>
+                <td class="populacao num">17.264.943</td>
             </tr>
             <tr>
                 <td>Espirito Santo</td>
-                <td class="populacao">4.018.650</td>
+                <td class="populacao num">4.018.650</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
                 <th>Total de Habitantes</th>
-                <td id="total"></td>
+                <td class="num" id="total"></td>
             </tr>
         </tfoot>
     </table>
-
+    
     <script>
         const populacoes = document.querySelectorAll(".populacao")
         let totalHab = 0
