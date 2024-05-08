@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim Escolar</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 600px;
+            height: 300px;
+        }
+
+        th {
+            background-color: rgb(155, 155, 155);
+            color: white;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px
+        }
+
+        .disciplina {
+            text-align: left;
+        }
+
+        .eh {
+            background-color: white;
+            color: black;
+        }
+
+        .media-eh {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Boletim Escolar</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Área</th>
+                <th rowspan="2">Disciplinas</th>
+                <th colspan="2">Notas</th>
+                <th rowspan="2">Média</th>
+            </tr>
+            <tr>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="4" class="eh">Exatas</th>
+                <td class="disciplina">Matemática</td>
+                <td class="notaM">7</td>
+                <td class="notaM">8,5</td>
+                <td id="mediaM" class="exatas"></td>
+            </tr>
+            <tr>
+                <td class="disciplina">Física</td>
+                <td class="notaF">6,5</td>
+                <td class="notaF">7</td>
+                <td id="mediaF" class="exatas"></td>
+            </tr>
+            <tr>
+                <td class="disciplina">Química</td>
+                <td class="notaQ">8</td>
+                <td class="notaQ">9,5</td>
+                <td id="mediaQ" class="exatas"></td>
+            </tr>
+            <tr>
+                <td class="disciplina">Biologia</td>
+                <td class="notaB">10</td>
+                <td class="notaB">9,5</td>
+                <td id="mediaB" class="exatas"></td>
+            </tr>
+            <tr>
+                <th colspan="4" class="media-eh">Média Exatas</th>
+                <th id="mediaEx"></th>
+            </tr>
+            <tr>
+                <th rowspan="2" class="eh">Humanas</th>
+                <td class="disciplina">História</td>
+                <td class="notaH">9,5</td>
+                <td class="notaH">9</td>
+                <td id="mediaH" class="humanas"></td>
+            </tr>
+            <tr>
+                <td class="disciplina">Geografia</td>
+                <td class="notaG">7</td>
+                <td class="notaG">7,5</td>
+                <td id="mediaG" class="humanas"></td>
+            </tr>
+            <tr>
+                <th colspan="4" class="media-eh">Média de Humanas</th>
+                <th id="mediaHu"></th>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const notasMat = document.querySelectorAll('.notaM')
+        const notasFis = document.querySelectorAll('.notaF')
+        const notasQui = document.querySelectorAll('.notaQ')
+        const notasBio = document.querySelectorAll('.notaB')
+        const notasHis = document.querySelectorAll('.notaH')
+        const notasGeo = document.querySelectorAll('.notaG')
+        const exatas = document.querySelectorAll('.exatas')
+        const humanas = document.querySelectorAll('.humanas')
+        const mediaMat = document.getElementById('mediaM')
+        const mediaFis = document.getElementById('mediaF')
+        const mediaQui = document.getElementById('mediaQ')
+        const mediaBio = document.getElementById('mediaB')
+        const mediaHis = document.getElementById('mediaH')
+        const mediaGeo = document.getElementById('mediaG')
+        const mediaExatas = document.getElementById('mediaEx')
+        const mediaHumanas = document.getElementById('mediaHu')
+
+        let somaMat = 0 
+        for (let i = 0; i < notasMat.length; i++) {
+            somaMat += Number(notasMat[i].textContent.replace(/\,/g, '.'))
+        }
+        const valorMediaMat = somaMat / notasMat.length
+        mediaMat.textContent = valorMediaMat.toFixed(2).replace(/\./g, ',')
+
+        let somaFis = 0 
+        for (let i = 0; i < notasFis.length; i++) {
+            somaFis += Number(notasFis[i].textContent.replace(/\,/g, '.'))
+        }
+        const valorMediaFis = somaFis / notasFis.length
+        mediaFis.textContent = valorMediaFis.toFixed(2).replace(/\./g, ',')
+
+        let somaQui = 0 
+        for (let i = 0; i < notasQui.length; i++) {
+            somaQui += Number(notasQui[i].innerText.replace(/\,/g, '.'))
+        }
+        const valorMediaQui = somaQui / notasQui.length
+        mediaQui.innerText = valorMediaQui.toFixed(2).replace(/\./g, ',')
+
+        let somaBio = 0
+        for (let i = 0; i < notasBio.length; i++) {
+            somaBio += Number(notasBio[i].textContent.replace(/\,/g, '.'))
+        }
+        const valorMediaBio = somaBio / notasBio.length
+        mediaBio.innerText = valorMediaBio.toFixed(2).replace(/\./g, ',')
+
+        let somaExatas = 0
+        for (let i = 0; i < exatas.length; i++) {
+            somaExatas += Number(exatas[i].innerText.replace(/\,/g, '.'))
+        }
+        const valorMediaExatas = somaExatas / exatas.length
+        mediaExatas.textContent = valorMediaExatas.toFixed(2).replace(/\./g, ',')
+
+        let somaHis = 0
+        for (let i = 0; i < notasHis.length; i++) {
+            somaHis += Number(notasHis[i].textContent.replace(/\,/g, '.'))
+        }
+        const valorMediaHis = somaHis / notasHis.length
+        mediaHis.textContent = valorMediaHis.toFixed(2).replace(/\./g, ',')
+
+        let somaGeo = 0
+        for (let i = 0; i < notasGeo.length; i++) {
+            somaGeo += Number(notasGeo[i].textContent.replace(/\,/g, '.'))
+        }
+        const valorMediaGeo = somaGeo / notasGeo.length
+        mediaGeo.textContent = valorMediaGeo.toFixed(2).replace(/\./g, ',')
+
+        let somaHumanas = 0
+        for (let i = 0; i < humanas.length; i++) {
+            somaHumanas += Number(humanas[i].textContent.replace(/\,/g, '.'))
+        }
+        const valorMediaHumanas = somaHumanas / humanas.length
+        mediaHumanas.textContent = valorMediaHumanas.toFixed(2).replace(/\./g, ',')
+    </script>
+</body>
+</html>
