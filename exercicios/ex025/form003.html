@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Ex 003</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="icolor">Color:</label>
+            <input type="color" name="color" id="icolor" value="#0000ff">
+        </p>
+        <p>
+            <label for="ilevel">Level:</label>
+            <input type="range" name="range" id="ilevel" min="1" max="10" value="5">
+        </p>
+        <p>
+            <label for="idocument">Image:</label>
+            <input type="file" name="file" id="idocument">
+        </p>
+        <p>
+            <label for="istate">State:</label>
+            <select name="state" id="istate">
+                <option value=""></option>
+                <optgroup label="Sudeste">
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+                <optgroup label="Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profession:</label>
+            <input type="text" name="prof" id="iprof" list="listprof">
+            <datalist id="listprof">
+                <option value="ADM">Administrador</option>
+                <option value="PRO">Professor</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="CON">Contabilista</option>
+            </datalist>
+        </p>
+        <input type="submit" value="Subimt">
+        <input type="reset" value="Clear">
+    </form>
+</body>
+</html>
