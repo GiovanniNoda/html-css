@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <header>
         <h1>Meu Site</h1>
-        
-        <menu>
+        <i id="emoji" class="bi bi-list" onclick="clickMenu()"></i>
+        <menu id="menu-itens">
             <ul>
                 <li><a href="#">Opção 1</a></li>
                 <li><a href="#">Oppção 2</a></li>
@@ -30,5 +31,16 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laboriosam deserunt officia earum ipsam molestiae quam neque accusamus aliquid consectetur. Ducimus minus tempore rem velit reiciendis odit, eos ea eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, mollitia excepturi ipsam deserunt ea amet quisquam autem in doloribus? Aliquam sint accusamus rem deleniti accusantium commodi voluptatibus odio mollitia dolor.</p>
         </article>
     </main>
+
+    <script>
+        menu = document.getElementById("menu-itens")
+        function clickMenu() {
+           if (menu.style.display == 'block') {
+            menu.style.display = 'none'
+           } else {
+            menu.style.display = 'block'
+           }
+        }
+    </script>
 </body>
 </html>

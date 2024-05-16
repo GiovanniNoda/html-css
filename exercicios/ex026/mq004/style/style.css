@@ -14,13 +14,28 @@ header {
     background-color: gray;
 }
 
-h1 {
+header h1 {
     padding: 10px;
     text-align: center;
 }
 
-menu {
+#emoji {
+    background-color: rgb(48, 48, 48);
     display: block;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+#emoji:hover {
+    background-color: white;
+    color: black;
+}
+
+menu {
+    display: none;
 }
 
 menu ul {
