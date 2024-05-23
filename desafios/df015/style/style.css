@@ -21,13 +21,13 @@ header {
 
 header h1 {
     color: white;
-    width: 200px;
+    flex: 0 0 200px;
     padding: 10px;
     text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.598);
 }
 
 .container {
-    padding: 10px 0 10px 0;
+    display: flex;
 }
 
 .option {
@@ -37,12 +37,13 @@ header h1 {
    border-radius: 5px;
    margin: 0 5px 0 0;
    cursor: pointer;
+   text-decoration: none;
 }
 
 .option:hover {
     background-color: white;
     color: black;
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
 }
 
 main {

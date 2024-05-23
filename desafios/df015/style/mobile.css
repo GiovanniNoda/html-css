@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 10px 20px;
+ }
+
+ header h1 {
+    flex: auto;
+ }
+
+.container {
+    flex-flow: column nowrap;
+    width: 100%;
+ }
+
+ .option {
+    margin: 0 0 10px 0;
+    text-align: center;
+ }
