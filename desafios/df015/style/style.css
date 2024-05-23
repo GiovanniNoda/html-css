@@ -23,6 +23,7 @@ header h1 {
     color: white;
     width: 200px;
     padding: 10px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.598);
 }
 
 .container {
@@ -41,15 +42,16 @@ header h1 {
 .option:hover {
     background-color: white;
     color: black;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
 }
 
 main {
     background-color: white;
-    width: 98vw;
+    width: 97vw;
     margin: auto;
     margin-top: 10px;
     border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.653);
 }
 
 section {
