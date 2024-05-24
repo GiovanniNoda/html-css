@@ -11,7 +11,13 @@ body {
     line-height: 1.5em;
 }
 
-h1, h2, p {
+h1, h2 {
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.2em;
+}
+
+p {
     margin-bottom: 10px;
     text-align: justify;
 }
@@ -25,10 +31,6 @@ h1, h2, p {
     padding: 20px;
     display: flex;
     flex-flow: column nowrap;
-}
-
-article {
-    border: 2px dashed green;
 }
 
 .media-text {
@@ -45,18 +47,17 @@ article {
 
 .text {
     flex: 1 1 500px;
-    border: 2px dashed blue;
 }
 
 .media {
     flex: 1 0 400px;
-    border: 2px dashed red;
 }
 
 img {
     display: block;
     margin: auto;
     width: 300px;
+    padding: 10px;
 }
 
 iframe {
